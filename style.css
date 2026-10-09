@@ -1,0 +1,225 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0c1020;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    max-width: 650px;
+    position: relative;
+    z-index: 1;
+}
+
+.tag {
+    color: #a99aff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.1;
+    margin: 22px 0;
+}
+
+h1 span {
+    color: #a99aff;
+}
+
+.content > p {
+    color: #b9bfd3;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.main-button,
+.submit-button {
+    border: none;
+    border-radius: 10px;
+    background: #8065f5;
+    color: white;
+    padding: 15px 24px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-button:hover,
+.submit-button:hover {
+    background: #6a4ce0;
+    transform: translateY(-2px);
+}
+
+.hero-circle {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    right: -100px;
+    top: 20%;
+    background: radial-gradient(circle, #46328b, #0c1020 70%);
+    opacity: 0.8;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 10;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    background: #171c31;
+    border: 1px solid #303650;
+    border-radius: 22px;
+    padding: 38px 30px;
+    text-align: center;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+    transform: translateY(20px);
+    transition: transform 0.3s;
+}
+
+.overlay.show .modal {
+    transform: translateY(0);
+}
+
+.close-button {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    border: none;
+    background: transparent;
+    color: #c8cce0;
+    font-size: 30px;
+}
+
+.mail-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 22px;
+    border-radius: 18px;
+    background: #292449;
+    color: #b5a6ff;
+    font-size: 32px;
+}
+
+.modal h2 {
+    font-size: 28px;
+    margin: 15px 0 12px;
+}
+
+.modal > p {
+    color: #b9bfd3;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+#signupForm {
+    text-align: left;
+}
+
+#signupForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #e0e3f1;
+}
+
+#email {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #3b4260;
+    border-radius: 9px;
+    background: #0e1325;
+    color: white;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+#email:focus {
+    border-color: #a99aff;
+}
+
+.submit-button {
+    width: 100%;
+}
+
+.modal .message {
+    margin: 15px 0 10px;
+    color: #a8f0c6;
+    font-size: 14px;
+}
+
+.modal small {
+    display: block;
+    color: #858da8;
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 35px 7%;
+    }
+
+    .hero-circle {
+        width: 280px;
+        height: 280px;
+        right: -150px;
+    }
+
+    .modal {
+        padding: 35px 22px;
+    }
+
+    .modal h2 {
+        font-size: 24px;
+    }
+}

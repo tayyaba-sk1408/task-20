@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Signup Popup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="hero">
+        <div class="content">
+            <span class="tag">WELCOME TO OUR COMMUNITY</span>
+            <h1>Stay Inspired.<br><span>Stay Updated.</span></h1>
+            <p>Get the latest updates, useful tips, and exclusive offers delivered straight to your inbox.</p>
+            <button class="main-button" id="openModal">Join Our Newsletter</button>
+        </div>
+        <div class="hero-circle"></div>
+    </main>
+
+    <div class="overlay" id="overlay">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="close-button" id="closeModal" aria-label="Close popup">&times;</button>
+            <div class="mail-icon">✉</div>
+            <span class="tag">EXCLUSIVE UPDATES</span>
+            <h2 id="modalTitle">Join Our Newsletter</h2>
+            <p>Subscribe to receive fresh ideas, updates, and special offers in your inbox.</p>
+
+            <form id="signupForm">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="you@example.com" required>
+                <button type="submit" class="submit-button">Subscribe Now</button>
+            </form>
+
+            <p class="message" id="message" aria-live="polite"></p>
+            <small>We respect your privacy. Unsubscribe anytime.</small>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
